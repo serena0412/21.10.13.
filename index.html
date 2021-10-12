@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>서울과제와밤샘대학교</title>
+
+	<style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+	body{margin: 0 auto; background:#0000ff;}
+	section{width: 700px; margin: 0 auto;}
+	body, section, h1{text-align: center; 
+		word-break:keep-all; font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden;}
+	header{margin-top: 20px;}
+
+	h1{margin-top: 12px; color: #ffffff; text-align: center; font-weight: 700;letter-spacing: 2px;}
+	h2{margin-top: 5px; color: #ffffff; text-align: center; font-weight: 500;}
+	h3, h4, h5, p {text-align: left; color: black; }
+	
+	h6{margin-top: 3px; color: #ffffff; text-align: center; font-weight: 300;} 
+
+	h3{font-weight: 700; font-size: 1.5em;}
+
+	p{ margin-left: 40px; font-size: 0.9em;}
+
+
+
+	section{margin: 0 auto; margin-top: 25px; margin-bottom: 30px; width: 750px;}	
+ 
+	.flex{display:flex; justify-content: space-between; margin-left: 40px; margin-bottom: -20px;}
+	.flex0{display:flex; justify-content: space-around; margin-left: 10px;}
+	.flex1{display:flex; justify-content: space-around; margin: 20px;}
+	.flex2{display:flex; justify-content: flex-end;}
+	.container{width: 620px; justify-content: space-around}
+	.but{background: black; color: white; height: 50px; width: 200px;}
+	.but2{background: black; color: white; height: 25px; width: 40px; margin-top: 20px;}
+
+	.section2{margin: 0 auto; margin-top: 25px; margin-bottom: 30px; width: 950px; background: white;}
+	.item{width: 280px; height: auto; background: blue;}
+	.width15{width: 15%;}
+	.width85{width: 85%;}
+	.width170{width: 170px;}
+	.width100{width: 100px;}
+	.border{border: 1px solid black; margin: 20px;padding: 20px;}
+	.border2{border: 1px solid black; padding: 20px;}
+
+
+	.tb{margin-top: 30px; margin-bottom: 30px;}
+
+
+	.word{opacity: 0; animation: fadein 1.5s forwards;}
+		@keyframes fadein{
+			to{opacity: 1;}
+		}
+
+	.potion{z-index: -10;position: absolute; left: 0; top: 0;}
+
+
+	.floating { position: fixed;}
+	/*sndBut에 주고싶었는데 실패함*/
+
+	</style>
+</head>
+<body>
+<header>
+	<img src='tittle.png' class="width100">
+	<h1>서울과제와밤샘대학교</h1>
+</header>
+
+<section>
+	<div class = 'flex1'>
+	<div class= 'but' id='delayBut'><h2>미룸</h2></div>	
+	<div class= 'but' id='regretBut'><h2>후회</h2></div>	
+	<div class= 'but' id='breakBut'><h2>밤샘</h2></div>
+	</div>	
+</section>
+
+<section class='section2 flex'>
+
+	<div class="item">
+		<img src ="bar.png" class= 'width170' id='sndBut'>
+		<audio id='mjSnd'src='mj.mp3'></audio>
+	</div>
+
+	<div class='container border'>
+	<div>
+		<div>
+			<h3>과제</h3>
+		</div>
+
+		<hr class="tb">
+
+		<div class="flex container">
+			<div class="width15">
+				<h4>제목</h4> 
+			</div>
+
+			<div class="width85">
+				<h5>중간 프로젝트 완성</h5>
+			</div>
+		</div>
+
+		<div class="flex container">
+			<div class="width15">
+				<h4>제출방식</h4> 
+			</div>
+			<div class="width85">
+				<h5>온라인</h5>
+			</div>
+		</div>
+
+		<div class="flex container">
+			<div class="width15">
+				<h4>게시일</h4> 
+			</div>
+			<div class="width85">
+				<h5>2021.10.13. 오후 2:00</h5>
+			</div>
+		</div>
+		<div class="flex container">
+			<div class="width15">
+				<h4>마감일</h4> 
+			</div>
+			<div class="width85">
+				<h5>2021.10.14. 오후 2:00</h5>
+			</div>
+		</div>
+		
+		<hr class="tb">
+		
+		<p>
+		안녕^^<br> 
+		다들 잘 지내고 있나요?<br> 
+		<br> 
+		오늘 배운 내용을 바탕으로 <br> 
+		내일까지 중간 프로젝트를 100% 완성해보세요. <br> 
+		<br> 
+		그리고 기말 프로젝트에 대한 기획서를 <br> 
+		ppt 15페이지 분량으로 정리하여 오세요.<br> 
+		단 발표시간은 5분을 넘지 말아야합니다.<br> 
+		<br> 
+		기한은 내일까지인 14일 오후 2시입니다.<br> 
+		지각 제출은 허용하지 않겠습니다.<br> 
+		<br> 
+		그럼 화이팅^^!<br> 
+
+		</p>
+
+		<hr class="tb">
+
+		<div class="container">
+			<div>
+				<h3>과제 제출</h3>
+			</div>
+			<div class='border2'>
+				<p id='poetText'></p>
+			</div>
+			<div>
+				<div class = 'flex2'>
+					<div class="flex0 width100">
+						<div class= 'but2'id="saveBut"><h6>저장</h6></div>
+						<div class= 'but2' id='cancelBut'><h6>취소</h6></div>
+					</div>
+				</div>
+		</div>
+
+	</div>
+</section>
+
+
+<script type="text/javascript">
+var state = true
+
+	sndBut.onclick = function(){
+			if(state){
+				mjSnd.play();
+				state = false;
+			}else{
+				mjSnd.pause();
+				state = true;
+			}
+      		
+
+
+
+
+var poet = '안녕하세요 교수님, 19100905 장서현 과제 제출합니다...<br><hr><br>(교수님 죄송합니다 죄송합니다 교수님 죄송합니다)<br> <br> 예 교수님 과제는 5개군요 (네?)<br> 아뇨 불만 없어요 다 해올게요 (네)<br> 심지어 창작 과제가 2개라구요? (아)<br> 잠을 줄여서라도 해야죠 암요 (암요)<br> 어 궁금하진 않지만 <br> 질문은 없냐 시기에 여쭤보자면<br> 학생들에게 다 이런 과제를 내주시나요<br> <br> 이 노래는 교수님이 쓰라 해서<br> 쓰는 노래 솔직히 대충 만들었네<br> 다음 주엔 인간적인 양의 과제를<br> 받았음 해 그랬음 해 어<br> 교수님 죄송합니다<br> 아 진짜 죄송합니다<br> 아 진짜 죄송합니다<br> 죄송합니다<br> <br>그렇게 잠도 안 자고<br> 밤 새가며 다 하고<br> 박카스 빈 병은 늘어나기만 하고<br> 원래 피곤한 얼굴에 더해진 다크서클은<br> 고장이 났나<br> 이른 아침 1교시 기타를 메고 등교해<br> 강의실 문을 똑똑똑 안녕하세요<br> 과제 몇 개 해왔냐는 교수님의 질문에<br> 다 해왔어요<br> (그걸 진짜 다 해왔어요?)<br>'
+
+var poetArr = poet.split(' ');
+console.log(poetArr);
+
+var myTimer = setInterval(print, 500);
+
+var s=0;
+function print(){
+	var t = document.createElement('span');
+		t.innerHTML = poetArr[s] + ' ';
+		t.className = 'word';
+		s++;
+		poetText.appendChild(t);
+
+		if(s == poetArr.length){
+			clearInterval(myTimer);
+		}
+	}
+
+}
+
+
+
+
+saveBut.onclick = function (){
+	            alert("과제 제출 기한이 지났습니다.");
+	}
+
+cancelBut.onclick = function (){
+	            alert("진심이십니까?");
+	}
+	 
+
+
+delayBut.onclick = function (){
+
+
+for(var i=0; i<100; i++){
+	var t = document.createElement('img');
+	t.src = '2.png';
+	
+	t.className='potion';
+	t.style.width = randomBH(20,100) + 'px';
+	t.style.height ='auto';
+ 
+	t.style.left = Math.random()*screen.availWidth + 'px'; 
+	t.style.top = Math.random()*screen.availHeight + 'px';
+
+	document.body.appendChild(t);
+	}
+
+function randomBH(min, max){
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random()*(max - min + 1)) + min;
+	}
+	}
+
+
+regretBut.onclick = function (){
+
+for(var i=0; i<100; i++){
+	var t = document.createElement('img');
+	t.src = '3.png';  
+	
+	t.className='potion';
+	t.style.width = randomBH(20,100) + 'px';
+	t.style.height ='auto';
+ 
+	t.style.left = Math.random()*screen.availWidth + 'px'; 
+	t.style.top = Math.random()*screen.availHeight + 'px';
+
+	document.body.appendChild(t);
+	}
+
+function randomBH(min, max){
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random()*(max - min + 1)) + min;
+	}
+	}
+
+
+
+breakBut.onclick = function (){
+
+for(var i=0; i<100; i++){
+	var t = document.createElement('img');
+	t.src = '1.png';   
+	
+	t.className='potion';
+	t.style.width = randomBH(20,100) + 'px';
+	t.style.height ='auto';
+ 
+	t.style.left = Math.random()*screen.availWidth + 'px'; 
+	t.style.top = Math.random()*screen.availHeight + 'px';
+
+	document.body.appendChild(t);
+	}
+
+function randomBH(min, max){
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random()*(max - min + 1)) + min;
+	}
+	}
+</script>
+
+
+</body>
+</html>
